@@ -21,7 +21,7 @@ function RadioPage({ id }: { id: number | undefined }) {
     const audioRef = useRef<HTMLAudioElement | null>(null);
 
     useEffect(() => {
-        fetch("/radio/radio.json")
+        fetch("/radio.json")
             .then(res => res.json())
             .then(res => {
                 if (res.length > 0 && id !== undefined) {
