@@ -3,7 +3,7 @@ import { ChangeEvent,  Key, useEffect, useState } from "react";
 function HomePage(props:any){
     const[radios,SetRadios]=useState([]);
     useEffect( function(){
-        fetch("/radio/radio.json")
+        fetch("/radio.json")
         .then(res=>res.json())
         .then(res=>{
             if(res.length>0 && res!=undefined){
