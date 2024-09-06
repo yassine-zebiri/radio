@@ -3,7 +3,7 @@ import {  useEffect, useState } from "react";
 function RadiosWliya(props:{handle({page,id}:{page:string,id:number}):void} ){
     const[radios,SetRadios]=useState([]);
     useEffect( function(){
-        fetch("/radio/radio.json")
+        fetch("/radio.json")
         .then(res=>res.json())
         .then(res=>{
             if(res.length>0 && res!=undefined){
